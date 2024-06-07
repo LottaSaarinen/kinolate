@@ -8,15 +8,11 @@ $config = array(
      "host" => "localhost"
   ),
   "urls" => array(
-      "baseUrl" => "/~lsaarine/kinolate"
+      "baseUrl" => "/~lsaarinen/kinolate"
   )
 );
 
-    "urls" => array(
-      "baseUrl" => "/~lsaarinen/kinolate"
-    )
-  );
-
+ 
   define("PROJECT_ROOT", dirname(__DIR__) . "/");
   define("HELPERS_DIR", PROJECT_ROOT . "src/helpers/");
   define("TEMPLATE_DIR", PROJECT_ROOT . "src/view/");
