@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1>📹KinoLate</h1>
+       <h1><a href="<?=BASEURL?>">📹KinoLate</a></h1>
     </header>
     <section>
       <?=$this->section('content')?>
