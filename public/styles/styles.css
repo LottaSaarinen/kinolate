@@ -218,4 +218,14 @@ footer {
   div tr:nth-child(even) {
     background-color: #ab97a3;
   }
-  
+  .tapahtumat > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tapahtumat > div > div:nth-child(3) {
+    text-align: right;
+  }
+  .tapahtumat > div {
+    display: flex;
+    justify-content: space-between;
+  }
