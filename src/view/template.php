@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-       <h><a href="<?=BASEURL?>">📹KinoLate</a></h>
+       <h2><a href="<?=BASEURL?>">📹KinoLate</a></h2>
        <div class="profile">
         <?php
           if (isset($_SESSION['user'])) {
