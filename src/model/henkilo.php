@@ -1,9 +1,10 @@
+
 <?php
 
   require_once HELPERS_DIR . 'DB.php';
 
-  function lisaaHenkilo($nimi,$email,$puhelinnumero,$salasana) {
-    DB::run('INSERT INTO henkilot (nimi, email, puhelinnumero, salasana) VALUE  (?,?,?,?);',[$nimi,$email,$discord,$salasana]);
+  function lisaaHenkilo($nimi,$email,$salasana) {
+    DB::run('INSERT INTO henkilot (nimi, puhelinnumero, email, salasana) VALUE  (?,?,?);',[$nimi,$email,$salasana]);
     return DB::lastInsertId();
   }
 

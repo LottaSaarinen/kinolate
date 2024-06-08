@@ -20,19 +20,25 @@ body {
       margin-right: auto;
       margin-left: auto;
       align-items: center; 
-    
-     
-     
 }
-
-h1 {
-    font-size: 140%;
-    text-align: left;   
-    max-width: auto;
-    height: auto;
-
     
-}
+      header h1 {
+      
+        margin-left: 0.5rem;
+        text-align: left;  
+       
+      } 
+     
+
+header a {
+  font-size: 3rem;
+  font-weight: bold;
+   color: rgb(80, 59, 8);
+  text-decoration: none;}
+ 
+  
+  
+
 h {
     font-size: 50%;
     color: rgb(53, 46, 26);
@@ -66,7 +72,7 @@ a {
 }
 a:hover {
 
-    color: #b71c1c
+    color: #873131
 }
  
 
@@ -126,7 +132,8 @@ li a, .dropbtn {
 footer {
     color:#cdb60b;
     font-size: 60%;
-    text-align: center;       
+    text-align: center;  
+    margin-top: 20em;     
   }
   
   footer hr {
@@ -159,6 +166,12 @@ footer {
     min-width: 12rem;
     margin: 1rem auto;
   }
+
+  .error {
+    color: rgb(116, 23, 23);
+    font-size: 0.8rem;
+  }
+  
  
   table {
     max-width: 768px;
@@ -170,10 +183,6 @@ footer {
     align-items: center;
 
   }
-  
-  
-  
-
   
   th, td {
     font-size: 60%;
@@ -219,11 +228,20 @@ footer {
     background-color: #ab97a3;
   }
   .tapahtumat > div {
+   
     display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background : linear-gradient(to right, #3f3d2c 0%, #6a6e71 ,#a9a588 100%);
+    padding: 10px;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-top: 1em;
   }
   .tapahtumat > div > div:nth-child(3) {
     text-align: right;
+    text-decoration: none;
   }
   .tapahtumat > div {
     display: flex;
