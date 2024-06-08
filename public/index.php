@@ -79,6 +79,7 @@ require_once '../src/init.php';
               if ($user['vahvistettu']) {
                 session_regenerate_id();
                 $_SESSION['user'] = $user['email'];
+                $_SESSION['admin'] = $user['admin'];
                 header("Location: " . $config['urls']['baseUrl']);
               } else {
                 echo $templates->render('kirjaudu', [ 'error' => ['virhe' => 'Tili on vahvistamatta! Ole hyvä, ja vahvista tili sähköpostissa olevalla linkillä.']]);
@@ -212,7 +213,14 @@ require_once '../src/init.php';
                         echo $templates->render('reset_lomake', ['error' => '']);
                         break;
                       }
-                
+                      
+                      break;
+                      case (bool)preg_match('/\/admin.*/', $request):
+                        if ($loggeduser["admin"]) {
+                          echo "ylläpitosivut";
+                        } else {
+                          echo $templates->render('admin_ei_oikeuksia');
+                        }
                       break;
                 
     default:
