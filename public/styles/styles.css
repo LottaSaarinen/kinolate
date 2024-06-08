@@ -5,7 +5,7 @@
 
 body {
 
-        font-family: 'Rubik', sans-serif;
+        font-family: sans-serif;
     color: rgb(240, 241, 214);
     background: linear-gradient(to right, #bab8aa 0%, #917543 100%);
     font-weight: 400;
@@ -22,16 +22,32 @@ body {
       align-items: center; 
 }
     
-      header h1 {
-      
+header {
+  background-color: #7e6739;
+  padding: 1rem 1.5rem;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+ 
+.header div a  {
+  align-items: center;
+  
+}
+
+     header h1 {
+      font-size: 2rem;
+      font-weight: bolder;
         margin-left: 0.5rem;
-        text-align: left;  
-       
+        text-align: left;    
       } 
      
 
 header a {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
    color: rgb(80, 59, 8);
   text-decoration: none;}
@@ -40,10 +56,10 @@ header a {
   
 
 h {
-    font-size: 50%;
+    font-size:3rem;
     color: rgb(53, 46, 26);
      align-items: center;
-     text-align: center;
+     text-align: ;
 }
 p1{
   margin-right: 55rem;
@@ -171,8 +187,33 @@ footer {
     color: rgb(116, 23, 23);
     font-size: 0.8rem;
   }
+  .info {
+    background-color:none;
+    border: 2px solid #555555;
+    border-radius: 1rem;
+    border-left:none;
+    border-right: none;
+    padding: 1rem;
+    margin: 5rem;
+    text-align: center;
+  }
   
- 
+  .info a {
+    color: #7b5c09;
+    text-decoration:wavy;
+  }
+  input[type=submit], .button 
+    .flexarea {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .button {
+      text-decoration: none;
+      margin-top: 2em;
+    }
+    
   table {
     max-width: 768px;
     margin-left: auto;

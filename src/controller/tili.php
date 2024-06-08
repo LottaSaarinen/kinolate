@@ -1,6 +1,7 @@
 <?php
 
-function lisaaTili($formdata) {
+function lisaaTili($formdata, $baseurl='') {
+
 
   // Tuodaan henkilo-mallin funktiot, joilla voidaan lisätä
   // henkilön tiedot tietokantaan.
@@ -29,11 +30,19 @@ function lisaaTili($formdata) {
 
   // Tarkistetaan, että sähköpostiosoite on määritelty ja se on
   // oikeassa muodossa.
+   // Tarkistetaan, että sähköpostiosoite on määritelty ja se on
+  // oikeassa muodossa.
+    // Tarkistetaan, että sähköpostiosoite on määritelty ja se on
+  // oikeassa muodossa.
   if (!isset($formdata['email']) || !$formdata['email']) {
     $error['email'] = "Anna sähköpostiosoitteesi.";
   } else {
     if (!filter_var($formdata['email'], FILTER_VALIDATE_EMAIL)) {
       $error['email'] = "Sähköpostiosoite on virheellisessä muodossa.";
+    } else {
+      if (haeHenkiloSahkopostilla($formdata['email'])) {
+        $error['email'] = "Sähköpostiosoite on jo käytössä.";
+      }
     }
   }
 
@@ -57,7 +66,6 @@ function lisaaTili($formdata) {
     // Salataan salasana myös samalla.
     $nimi = $formdata['nimi'];
     $email = $formdata['email'];
-   
     $salasana = password_hash($formdata['salasana1'], PASSWORD_DEFAULT);
 
     // Lisätään henkilö tietokantaan. Jos lisäys onnistui,
@@ -82,11 +90,29 @@ function lisaaTili($formdata) {
     // onnistui rivin lisääminen. Muuten liäämisessä ilmeni
     // ongelma.
     if ($idhenkilo) {
-      return [
-        "status" => 200,
-        "id"     => $idhenkilo,
-        "data"   => $formdata
-      ];
+          // Luodaan käyttäjälle aktivointiavain ja muodostetaan
+      // aktivointilinkki.
+      require_once(HELPERS_DIR . "secret.php");
+      $avain = generateActivationCode($email);
+      $url = 'https://' . $_SERVER['HTTP_HOST'] . $baseurl . "/vahvista?key=$avain";
+
+      // Päivitetään aktivointiavain tietokantaan ja lähetetään
+      // käyttäjälle sähköpostia. Jos tämä onnistui, niin palautetaan
+      // palautusarvona tieto tilin onnistuneesta luomisesta. Muuten
+      // palautetaan virhekoodi, joka ilmoittaa, että jokin
+      // lisäyksessä epäonnistui.
+      if (paivitaVahvavain($email,$avain) && lahetaVahvavain($email,$url)) {
+        return [
+          "status" => 200,
+          "id"     => $idhenkilo,
+          "data"   => $formdata
+        ];
+      } else {
+        return [
+          "status" => 500,
+          "data"   => $formdata
+        ];
+      }
     } else {
       return [
         "status" => 500,
@@ -104,6 +130,63 @@ function lisaaTili($formdata) {
     ];
 
   }
+}
+function lahetaVahvavain($email,$url) {
+  $message = "Hei,<br><br>\n\n" . 
+             "Olet rekisteröitynyt KinoLate käyttäjäksi tällä\n" . 
+             "sähköpostiosoitteella. Klikkaamalla alla olevaa\n" . 
+             "linkkiä vahvistat käyttämäsi sähköpostiosoitteen\n" .
+             "ja pääset käyttämään KinoLate-palvelua.\n\n" . 
+             "$url\n\n" .
+             "Jos et ole rekisteröitynyt KinoLate käyttäjäksi, niin\n" . 
+             "silloin tämä sähköposti on tullut sinulle\n" .
+             "vahingossa. Siinä tapauksessa ole hyvä ja\n" .
+             "poista tämä viesti.\n\n".
+             "Terveisin, KinoLate-tiimi";
+  return mail($email,'KinoLate-tilin aktivointilinkki',$message);
+}
+
+function lahetaVaihtoavain($email,$url) {
+  $message = "Hei,<br><br>\n\n" .
+             "Olet pyytänyt tilisi salasanan vaihtoa, klikkaamalla\n" .
+             "alla olevaa linkkiä pääset vaihtamaan salasanasi.\n" .
+             "Linkki on voimassa 30 minuuttia.\n\n" .
+             "$url\n\n" .
+             "Jos et ole pyytänyt tilisi salasanan vaihtoa, niin\n" .
+             "voit poistaa tämän viestin turvallisesti.\n\n" .
+             "Terveisin, KinoLate-tiimi";
+  return mail($email,'KinoLate-tilin salasanan vaihtaminen',$message);
+}
+function luoVaihtoavain($email, $baseurl='') {
+
+  // Luodaan käyttäjälle vaihtoavain ja muodostetaan
+  // vaihtolinkki.
+  require_once(HELPERS_DIR . "secret.php");
+  $avain = generateResetCode($email);
+  $url = 'https://' . $_SERVER['HTTP_HOST'] . $baseurl . "/reset?key=$avain";
+
+  // Tuodaan henkilo-mallin funktiot, joilla voidaan lisätä
+  // vaihtoavaimen tiedot kantaan.
+  require_once(MODEL_DIR . 'henkilo.php');
+
+  // Lisätään vaihtoavain tietokantaan ja lähetetään
+  // käyttäjälle sähköpostia. Jos tämä onnistui, niin palautetaan
+  // palautusarvona vaihtoavain ja sähköpostiosoite. Muuten
+  // palautetaan virhekoodi, joka ilmoittaa, että jokin lisäyksessä
+  // epäonnistui.
+  if (asetaVaihtoavain($email,$avain) && lahetaVaihtoavain($email,$url)) {
+    return [
+      "status"   => 200,
+      "email"    => $email,
+      "resetkey" => $avain
+    ];
+  } else {
+    return [
+      "status" => 500,
+      "email"   => $email
+    ];
+  }
+
 }
 
 ?>
