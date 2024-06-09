@@ -1,4 +1,6 @@
-<?php $this->layout('template', ['title' => 'Salasanan vaihtolinkki lähetetty']) ?>
+<?php 
+
+$this->layout('template', ['title' => 'Salasanan vaihtolinkki lähetetty']) ?>
 
 <h1>Salasanan vaihtolinkki lähetetty</h1>
 

@@ -110,6 +110,7 @@ require_once '../src/init.php';
                 header("Location: tapahtumat");
               }
               break;
+              
               case '/peru':
                 if ($_GET['id']) {
                   require_once MODEL_DIR . 'ilmoittautuminen.php';

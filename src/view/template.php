@@ -8,9 +8,11 @@
   </head>
   <body>
     <header>
-       <h2><a href="<?=BASEURL?>">📹KinoLate</a></h2>
+       <h2><a href="<?=etusivu.php?>">📹KinoLate</a></h2>
+      
        <div class="profile">
         <?php
+        include 'yla.php';
           if (isset($_SESSION['user'])) {
             echo "<div>$_SESSION[user]</div>";
             echo "<h1><div><a href='logout'>Kirjaudu ulos</a></div></h1>";
