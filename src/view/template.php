@@ -13,12 +13,12 @@
         <?php
           if (isset($_SESSION['user'])) {
             echo "<div>$_SESSION[user]</div>";
-            echo "<div><a href='logout'>Kirjaudu ulos</a></div>";
+            echo "<h1><div><a href='logout'>Kirjaudu ulos</a></div></h1>";
             if (isset($_SESSION['admin']) && $_SESSION['admin']) {
               echo "<div><a href='admin'>Ylläpitosivut</a></div>";  
             }
           } else {
-            echo "<div><a href='kirjaudu'>Kirjaudu</a></div>";
+            echo "<h1><div><a href='kirjaudu'>Kirjaudu</a></div></h1>";
           }
         ?>
       </div>

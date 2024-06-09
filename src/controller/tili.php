@@ -132,7 +132,7 @@ function lisaaTili($formdata, $baseurl='') {
   }
 }
 function lahetaVahvavain($email,$url) {
-  $message = "Hei,<br><br>\n\n" . 
+  $message = "Hei,\n\n" . 
              "Olet rekisteröitynyt KinoLate käyttäjäksi tällä\n" . 
              "sähköpostiosoitteella. Klikkaamalla alla olevaa\n" . 
              "linkkiä vahvistat käyttämäsi sähköpostiosoitteen\n" .
@@ -147,7 +147,7 @@ function lahetaVahvavain($email,$url) {
 }
 
 function lahetaVaihtoavain($email,$url) {
-  $message = "Hei,<br><br>\n\n" .
+  $message = "Hei,\n\n" . 
              "Olet pyytänyt tilisi salasanan vaihtoa, klikkaamalla\n" .
              "alla olevaa linkkiä pääset vaihtamaan salasanasi.\n" .
              "Linkki on voimassa 30 minuuttia.\n\n" .

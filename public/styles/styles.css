@@ -8,7 +8,7 @@ body {
         font-family: sans-serif;
     color: rgb(240, 241, 214);
     background: linear-gradient(to right, #bab8aa 0%, #917543 100%);
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
       text-align: center;
       font-size: 30;
@@ -30,7 +30,8 @@ header {
   align-items: center;
 padding-right: 2em;
 padding-left: 2em;
-
+color: rgb(59, 50, 24);
+text-shadow: #555555;
 }
  
 header h1 {
@@ -43,12 +44,14 @@ header h1 {
 
 header a {
   text-decoration: none;
+  
 }
  
 
 header h2 {
   font-size:2rem;
-  color: rgb(68, 58, 31);
+  font-family:'rubik';
+color:rgb(59, 42, 18);
   align-items: center;
   text-align: left;
 }
