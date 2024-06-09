@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-       <h2><a href="<?=etusivu.php?>">📹KinoLate</a></h2>
+       <h2><a href="<?=BASEURL?>">📹KinoLate</a></h2>
       
        <div class="profile">
         <?php
@@ -17,7 +17,7 @@
             echo "<div>$_SESSION[user]</div>";
             echo "<h1><div><a href='logout'>Kirjaudu ulos</a></div></h1>";
             if (isset($_SESSION['admin']) && $_SESSION['admin']) {
-              echo "<div><a href='admin'>Ylläpitosivut</a></div>";  
+              echo "<h1><div><a href='admin'>Ylläpitosivut</a></div></h1>";  
             }
           } else {
             echo "<h1><div><a href='kirjaudu'>Kirjaudu</a></div></h1>";
