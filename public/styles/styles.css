@@ -24,13 +24,13 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2em;
-  padding-left: 2em;
+  padding-right: 1em;
+  padding-left: 1em;
   margin-bottom: 10em;
 }
  
 header h1 {
-  display: grid;
+ 
   font-size: 1rem;
   color:black;
   text-align: right; 
@@ -49,9 +49,10 @@ header h2 {
 
  header p2 {
   display: grid;
-  grid-template-columns: 11em 0em 0em 11em;
+  grid-template-columns: 12em 0em 0em 12em;
   color: grey;
   font-size: 1rem;
+  margin-right:20;
 }
 
 img{
@@ -63,6 +64,7 @@ p1{
   margin-right: 55rem;
   font-size: 70%;
   color: rgb(90, 86, 74);
+
 }
 
 p{
@@ -71,34 +73,28 @@ p{
     align-items: center;
     text-align: center;   
 }
-
 a {
     color: rgb(53, 46, 26);  
-    
 }
 a:hover {
-
     color: #873131
 }
  
-
 ul {
   font-size: 50%;
   list-style-type: none;
-  margin: 11,0,0,15em;
+  margin: 11,0,0,20em;
   padding: 2px;
   overflow: hidden;
   background-color:none;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: -0.7rem;
+  margin-top: -0.4rem;
   text-align: center;
   align-items: center;
   max-width: auto;
 }
-
-
 
 li a, .dropbtn {
   display: inline-block;
@@ -106,7 +102,6 @@ li a, .dropbtn {
   text-align: center;
   padding: 8px 10px;
   text-decoration: none;
-
 }
 
 .dropdown-content {
@@ -118,7 +113,6 @@ li a, .dropbtn {
   align-items: center;
   max-width: auto;
 }
-
 .dropdown-content a {
   color:none;
   padding: 18px 10px;

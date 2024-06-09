@@ -9,12 +9,11 @@
   <body>
     <header>
        <h2><a href="<?=BASEURL?>">📹KinoLate</a></h2>
-      
        <div class="profile">
         <?php
         include 'yla.php';
           if (isset($_SESSION['user'])) {
-            echo "<div>$_SESSION[user]</div>";
+            echo "<h1><div>$_SESSION[user]</div></h1>";
             echo "<h1><div><a href='logout'>Kirjaudu ulos</a></div></h1>";
             if (isset($_SESSION['admin']) && $_SESSION['admin']) {
               echo "<h1><div><a href='admin'>Ylläpitosivut</a></div></h1>";  
