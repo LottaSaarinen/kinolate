@@ -1,5 +1,5 @@
 <?php
-include 'yla.php';
+
 
 ?>
 
@@ -51,4 +51,3 @@ include 'yla.php';
 
 
 <?php
-include 'ala.php'; 

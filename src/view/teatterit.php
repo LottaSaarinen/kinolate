@@ -1,8 +1,9 @@
 <?php
-include 'yla.php';
+
+$this->layout('template', ['title' => 'Teatterit']) 
 ?>
 
-<h2>TEATTERIMME:</h2>
+<h2>TEATTERIMME:</h2><br><br>
   <h3>Sunset Cinema Vaasa</h3>
     <p>
     <?php
@@ -70,4 +71,3 @@ include 'yla.php';
   </section>
 
 <?php
-include 'ala.php';

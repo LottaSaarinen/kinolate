@@ -28,6 +28,8 @@ require_once '../src/init.php';
  
      switch ($request) {
     case '/':
+     
+
     case '/tapahtumat':
       require_once MODEL_DIR . 'tapahtuma.php';
       $tapahtumat = haeTapahtumat();
@@ -223,7 +225,42 @@ require_once '../src/init.php';
                           echo $templates->render('admin_ei_oikeuksia');
                         }
                       break;
-                
+
+                      case "/etusivu":
+                      if ($request === '/' || $request === '/etusivu') {
+                        echo $templates->render('etusivu');
+                       }
+                       break;
+                       case "/elokuvat": if ($request === '/elokuvat') {
+                            require_once MODEL_DIR . 'elokuvat.php';
+                            $elokuvat = haeElokuvat();
+                            echo $templates->render('elokuvat',['elokuvat' => $elokuvat]);
+                         } 
+                         break;
+                            case "/teatterit": if ($request === '/teatterit') {
+                            echo $templates->render('teatterit');
+                         }
+                         break;
+                          case "/liput": if ($request === '/liput') {
+                            echo $templates->render('liput');
+                          }
+                          break;
+                            case "/elamyslomake": if ($request === '/elamyslomake') {
+                            echo $templates->render('elamyslomake');
+                          } 
+                          break;
+                            case "/tulossa": if ($request === '/tulossa') {
+                            echo $templates->render('/tulossa');
+                          }
+                          break;
+                             case "/lasten_elokuvat": if ($request === '/lasten_elokuvat') {
+                            echo $templates->render('lasten_elokuvat');
+                        } 
+                        
+                            else {
+                            echo $templates->render('notfound');
+                        }
+                        break;
     default:
       echo $templates->render('notfound');
   }    

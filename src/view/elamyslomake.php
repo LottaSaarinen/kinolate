@@ -1,6 +1,9 @@
 <?php
-include 'yla.php';
+
+$this->layout('template', ['title' => 'Elämyspaketti']) 
+
 ?>
+
 <div class="content">
       <h2>Elokuva elämyspaketit</h2>
             <p>Järjestä lasten tai aikuisten syntymäpäiväjuhlat tai rentoudu ystävien kanssa elokuvaelämyspaketin parissa.</p>
@@ -28,11 +31,10 @@ Leffoja voi selata <a href="haku.php">tästä</a></p>
 </div>
 
 
-
 <section class="yhteydenotto">
       <h2>Yhteydenotto</h2>
       <p>Jätä tarjouspyyntö lasten tai aikuisten elokuvaelämyspaketista</p>
-      <form action="" method="POST">
+      <form action="yllapitosivut" method="POST">
             <div>
                   <label for="nimi">Nimi:</label>
                   <input id="nimi" type="text" name="nimi">
@@ -55,6 +57,3 @@ Leffoja voi selata <a href="haku.php">tästä</a></p>
             </div>
       </form>
 </section>
-<?php
-include 'ala.php';
-?>
