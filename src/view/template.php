@@ -16,15 +16,12 @@
          <div class="dropdown-content">
  
          <p2> <a href="teatterit">Helsinki, Turku, Tampere, Vaasa, Rovaniemi</a></p2>
-         <p2><a href="elamyslomake">Elämyspaketit ja tarjouspyyntölomake</a></p2>
-         <p2><a href="etusivu">etusivu</a></p2>
-   
+     
         <li class="dropdown">
         <p2><a href="javascript:void(0)" class="dropbtn">Liput ja elämyspaketit</a></p2>
  <div class="dropdown-content">
  <p2> <a href="liput">Liput</a></p2>
  <p2><a href="elamyslomake">Elämyspaketit ja tarjouspyyntölomake</a></p2>
- <p2><a href="tapahtumat">Yleiset teemaillat</a></p2>
 
  <li class="dropdown">
  <p2><a href="javascript:void(0)" class="dropbtn">Elokuvat</a></p2>
@@ -32,6 +29,8 @@
  <p2> <a href="haku">Kaikki elokuvat</a></p2>
  <p2>  <a href="tulossa">Tulossa olevat elokuvat</a></p2>
  <p2> <a href="lapset">Lasten elokuvat</a></p2>
+ <p2><a href="tapahtumat">Elokuvateematapahtumat </a></p2>
+
 </div>
 </li>
 </ul>
@@ -51,6 +50,10 @@
    
     </header>
     <section>
+  
+</p>
+<br>
+
       <?=$this->section('content')?>
     </section>
     <footer>

@@ -8,7 +8,7 @@ function haelippu($idlippu,$idhenkilo,$idnaytos) {
 }
 
 function lisaalippu($idlippu,$idhenkilo,$idnaytos) {
-  DB::run('INSERT INTO liput ($idlippu,idhenkilo, idnaytos) VALUE (?,?,?)',
+  DB::run('INSERT INTO liput ($idlippu,$idhenkilo,$idnaytos) VALUE (?,?,?)',
           [$idlippu,$idhenkilo,$idnaytos]);
   return DB::lastInsertId();
 }

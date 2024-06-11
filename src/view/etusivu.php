@@ -9,7 +9,7 @@ $this->layout('template', ['title' => 'Etusivu'])
              
             
 <p>Tervetuloa unohtumattomaan elokuvaelämykseen Helsinkiin, Turkuun, Tampereelle, Vaasaan ja Rovaniemelle!<br>
- Järjestä lasten tai aikuisten syntymäpäiväjuhlat tai rentoudu ystävien kanssa elokuvaelämyspaketin parissa.<br>
+ 
 Elokuvateattereissamme panostamme jokaiseen yksityiskohtaan tarjotaksemme sinulle ja seurueellesi parhaan mahdollisen elokuvakokemuksen. 
 <br>Viidestä teatteristamme löytyy ravintolat a-oikeuksin sekä kattava kioski<br> Nauti korkealaatuisista ääni- ja kuvanäytöksistä, jotka tempaavat sinut mukaansa elokuvan lumoihin.
 <br> Rentoudu tilavilla istuimillamme ja nauti optimaalisesta katselukokemuksesta ilman häiriöitä. Istuimet tarjoavat mukavuutta ja jalkatilaa, jotta voit keskittyä täysillä elokuvan juoneen.

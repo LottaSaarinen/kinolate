@@ -1,6 +1,6 @@
 <?php
 
-
+ $this->layout('template', ['title' => 'Liput']) ?>
 ?>
 
 <html><body>
@@ -18,25 +18,23 @@
     <label>Sähköposti:</label>
     <input type="text" name="email" >
   </div>
+  
   <div>
     <label>Salasana:</label>
     <input type="password" name="salasana">
   </div>
-  </div>
-  <div>
-    <label>Elokuva:</label>
-    <input type="text" name="email" >
-  </div>
-
-  </div>
+ 
   <div>
     <label>Näytös:</label>
     <input type="text" name="naytos" >
   </div>
-    
-  <label>Paikka:</label>
+
+  
+  <div>
+    <label>Istumapaikka:</label>
     <input type="text" name="paikka" >
   </div>
+
 
 
 

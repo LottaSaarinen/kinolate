@@ -3,7 +3,8 @@
 $this->layout('template', ['title' => 'Teatterit']) 
 ?>
 
-<h2>TEATTERIMME:</h2><br><br>
+<h2>TEATTERIMME:</h2>
+<br><br><br>
   <h3>Sunset Cinema Vaasa</h3>
     <p>
     <?php
@@ -16,7 +17,7 @@ $this->layout('template', ['title' => 'Teatterit'])
         Moderni ja tyylikäs sisustus neutraaleilla väreillä, mukavat istuimet sadalle ja tilava jalkatila.
         Ravintola kioskista laaja valikoima perinteisiä elokuvaherkkuja, kuten popcornia, virvoitusjuomia ja makeisia, sekä gourmet-vaihtoehtoja, kuten juustolautasia ja viinivalikoima.
       </p>
-    </section>
+    </section><br><br>
   <h3>City Lights Theater Rovaniemi</h3>
    <p>
     <?php
@@ -29,7 +30,7 @@ $this->layout('template', ['title' => 'Teatterit'])
     Kaupunkimainen tunnelma suurkaupungin valojen keskellä, moderni ja minimalistinen sisustus, mukavat istuimet viidelle kymmenelle.
     Ravintola kioskista: Monipuolinen valikoima naposteltavia, kuten nachoja ja dippejä, sekä laadukas olut- ja viinivalikoima.  
     </p>
-  </section>
+  </section><br><br>
   <h3>Family Fun Flicks Tampere</h3>
    <p>
     <?php
@@ -42,7 +43,7 @@ $this->layout('template', ['title' => 'Teatterit'])
         Kutsuva ja värikäs ympäristö, jossa on leikkisä tunnelma, mukavat ja tilavat istuimet 75 henkilölle.
         Ravintolakioskista Lasten ja perheiden perinteiset suosikkiannokset sekä herkkuja, kuten jäätelöä, karkkia ja popcorneja, sekä terveellisiä vaihtoehtoja, kuten hedelmävartaita ja vihannesstickssejä.
       </p>
-      </section>
+      </section><br><br>
    <h3>Classic Cinema Palace Helsinki</h3>
    <p>
     <?php
@@ -55,7 +56,7 @@ $this->layout('template', ['title' => 'Teatterit'])
       Elegantti ja perinteinen teatteri-ilme, historiallisia elementtejä ja ylellisiä yksityiskohtia, mukavat istuimet nahkaverhoilulla 250 henkilölle.
       Ravintola kioskista perinteisiä elokuvaherkkuja, kuten popcorneja, virvoitusjuomia ja jäätelöä, sekä hienostuneita vaihtoehtoja, kuten juustolautasia ja samppanjaa.
     </p>
-    </section>
+    </section><br><br>
    <h3>Tech Hub Theaters Turku</h3>
    <p>
     <?php
@@ -70,4 +71,3 @@ $this->layout('template', ['title' => 'Teatterit'])
     </p>
   </section>
 
-<?php

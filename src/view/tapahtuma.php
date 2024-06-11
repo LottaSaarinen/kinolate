@@ -3,7 +3,7 @@
   $start = new DateTime($tapahtuma['tap_alkaa']);
   $end = new DateTime($tapahtuma['tap_loppuu']);
 ?>
-
+<h1> Luomalla tilin pääset ilmottautumaan mukaan tapahtumaan</h1>
 <h1><?=$tapahtuma['nimi']?></h1>
 <div><?=$tapahtuma['kuvaus']?></div>
 <div>Alkaa: <?=$start->format('j.n.Y G:i')?></div>
