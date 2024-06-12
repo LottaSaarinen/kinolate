@@ -232,8 +232,8 @@ require_once '../src/init.php';
                        }
                        break;
                        case "/elokuvat": if ($request === '/elokuvat') {
-                            require_once MODEL_DIR . 'elokuvat.php';
-                            $elokuvat = haeElokuvat();
+                            //require_once MODEL_DIR . 'elokuvat.php';
+                           // $elokuvat = haeElokuvat();
                             echo $templates->render('elokuvat',['elokuvat' => $elokuvat]);
                          } 
                          break;

@@ -1,49 +1,30 @@
 <?php
 
  $this->layout('template', ['title' => 'Liput']) ?>
-?>
+
 
 <html><body>
     
        
-    <h2>Varaa liput</h2>
+    <h2>Varaa liput</h2><br>
 
-<form action="varaa.php" method="POST">
+    <h2>Voit varata liput näytökseen kun olet luonut tilin</h2><br><br>
+    <form action="" method="POST">
   <div>
-    <label for="nimi">Nimi:</label>
-    <input id="nimi" type="text" name="nimi">
-    
+    <label for="salasana1">Näytöksen ID-numero:</label>
+    <input id="idnaytos" type="int" name="idnaytos">
   </div>
   <div>
-    <label>Sähköposti:</label>
-    <input type="text" name="email" >
-  </div>
-  
-  <div>
-    <label>Salasana:</label>
-    <input type="password" name="salasana">
+    <label for="salasana2">Paikan ID_numero:</label>
+    <input id="idpaikka" type="int" name="idpaikka">
   </div>
  
-  <div>
-    <label>Näytös:</label>
-    <input type="text" name="naytos" >
-  </div>
+    
 
-  
-  <div>
-    <label>Istumapaikka:</label>
-    <input type="text" name="paikka" >
-  </div>
-
-
-
-
-
-    Varauskalenteri? Kirjaudu sisään?Valmiiksi hinnoitellut elämyspaketit?<br>
     
         <input type=submit value="Lähetä">
 </form>
-
+<p>miten jos haluaa varata montapaikkaa?</p>
     </body></html>
 
 

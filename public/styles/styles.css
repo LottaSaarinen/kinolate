@@ -6,9 +6,10 @@
 }
 html {
   font-family: 'Rubik', sans-serif;
-  background: rgb(95, 72, 1);
-  background: linear-gradient(to right, #686762 0%, #9d9486 100%);;
+  background: rgb(0,34,0);
+  background: linear-gradient(120deg, rgb(133, 135, 133) 0%, rgb(104, 106, 106) 36%, rgb(151, 151, 151) 100%);
 }
+
 
 body {
 
@@ -18,7 +19,8 @@ body {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    max-width: 75%;
+    width:90%;
+    max-width: auto;
     height: auto;
     margin-top: 1em;    
     margin-bottom: 1em;
@@ -26,21 +28,39 @@ body {
     margin-left: auto;
     align-items: center; 
 }
+img{
+  width:60%;
+  height:auto;
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 2rem;
+}
+p{
+  font-size: 2rem;
+ color: rgb(53, 46, 26);
+  align-items: center;
+  text-align: center;   
+}
     
 header {
-  background-color: #7e6739;
-  display: flex;
-  flex-direction: row;
-
+  background-color: #7d6e50;
   align-items: center;
   margin-bottom: 8em;
+  padding: 2,2,2,2rem;
 }
  
 header h1 {
- 
   font-size: 1rem;
   color:black;
   text-align: right; 
+  padding-bottom:2rem;
+  margin-top: -2em; 
 } 
      
 header a {
@@ -52,55 +72,43 @@ header h2 {
   color:rgb(59, 42, 18);
   align-items: center;
   text-align: left;
+  font-weight: bold;
 }
 
- header p2 {
-  display: grid;
-  grid-template-columns: 8em 0em 0em 10em;
-  color: rgb(111, 108, 108);
-  font-size: 1rem;
-  margin-right:20;
-}
-
-img{
-    width:60%;
-    height:auto;
-   
-}
-p1{
-  margin-right: 55rem;
-  font-size: 2rem;
-  color: rgb(90, 86, 74);
-
-}
-
-p{
-    font-size: 2rem;
-   color: rgb(53, 46, 26);
-    align-items: center;
-    text-align: center;   
-}
 a {
     color: rgb(53, 46, 26);  
 }
 a:hover {
     color: #873131
 }
- 
+ nav ul {
+  
+  display: inline-grid;
+  flex-direction: column;
+justify-content:flex-end;
+margin-top: -10em;
+  color: rgb(111, 108, 108);
+  font-size: 1rem;
+ }
+
 ul {
   font-size: 2rem;
   list-style-type: none;
   overflow: hidden;
   background-color:none;
   display: flex;
-  flex-direction: row;
-  margin-top: -0.4rem;
+  flex-direction: column;
+  justify-content:flex-end;
   max-width: auto;
   
 }
-
+nav ul ul {
+  display: none;
+  position:absolute;
+}
 li a, .dropbtn {
   display: inline-block;
+  position:relative;
   color: rgb(62, 60, 60);
   text-align: center;
   padding: 8px 10px;
@@ -261,14 +269,18 @@ li a, .dropbtn {
 
   footer {
     color:#cdb60b;
-    font-size: 60%;
+    font-size: 80%;
     text-align: center;  
     margin-top: 20em;
     margin-bottom: 10rem;     
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
   
   footer hr {
     border: none;
     border-top: 1px dashed hsl(40, 92%, 20%);
-    margin: 1em auto;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
