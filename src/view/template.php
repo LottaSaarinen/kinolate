@@ -11,16 +11,13 @@
        <h2><a href="etusivu">📹KinoLate</a></h2>
         <nav>
         <ul>
-        <li class="dropdown">
-         <p2> <a href="teatterit">Teatterit</a></p2>
-         <div class="dropdown-content">
-         <li class="dropdown">
-         <p2><a href="javascript:void(0)" class="dropbtn">Näytökset, elokuvat liput ja elämyspaketit</a></p2>
-         <div class="dropdown-content">
-         <p2><a href="liput">Näytökset ja Liput</a></p2>
-         <p2><a href="elokuvat">Selaa elokuvia</a></p2>
-         <p2><a href="elamyslomake">Elämyspaketit ja tarjouspyyntölomake</a></p2>
-         <p2><a href="tapahtumat">Elokuvateematapahtumat </a></p2>
+        <p2> <a href="teatterit">Teatterimme</a></p2>
+        
+      
+  
+         <p2><a href="elokuvat">Näytökset</a></p2>
+   
+         <p2><a href="tapahtumat">Elokuvateemapäivät </a></p2>
 </div>
 </li>
 </ul>

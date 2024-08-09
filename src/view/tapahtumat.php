@@ -1,6 +1,7 @@
 <?php $this->layout('template', ['title' => 'Tulevat tapahtumat']) ?>
 
 <h1>Tulevat tapahtumat</h1>
+<br><br><br><br>
 
 <div class='tapahtumat'>
 <?php

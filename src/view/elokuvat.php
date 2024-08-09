@@ -1,17 +1,27 @@
 
- <?php $this->layout('template', ['title' => 'Selaa elokuvia']) ?>
 
+<?php $this->layout('template', ['title' => 'Näytökset']) ?>
 
+<h1>Näytökset</h1>
 
-<h1>Selaa elokuvia</h1>
-<br><br>
-<br><br>
+<div class='tapahtumat'>
+<?php
 
- <p2> <a href="lapset">Lasten elokuvat</a></p2>
- <br><br>
- <p2> <a href="liput">Näytökset ja Liput</a></p2>
- <br><br>
- <p2><a href="tulossa">Tulossa olevat elokuvat</a></p2>
- <br><br>
+foreach ($elokuvat as $elokuva) {
 
+  $start = new DateTime($elokuva['nay_alkaa']);
+  $end = new DateTime($elokuva['nay_loppuu']);
+
+  echo "<div>";
  
+    echo "<p><div>$elokuva[nimi]</div></p>";
+    echo "<p><div><img src= $elokuva[kuva]></div></p>";
+    echo "<p><div>" . $start->format('j.n.Y G:i') . "-" . $end->format('G:i') . "</div></p>";
+    
+    echo "<p><div><a href='elokuva?id=" . $elokuva['idelokuva'] . "'>Lue lisää elokuvasta täätä</a></div></p>";
+  echo "</div>";
+
+}
+?>
+</div>
+
