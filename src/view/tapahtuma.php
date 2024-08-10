@@ -1,8 +1,10 @@
 
 <?php $this->layout('template', ['title' => $tapahtuma['nimi']]) ;
+
   $start = new DateTime($tapahtuma['tap_alkaa']);
   $end = new DateTime($tapahtuma['tap_loppuu']);
 ?>
+
 <hr><br><hr><br><br>
 <?php
 
@@ -13,11 +15,12 @@ echo"<h2> Luomalla tilin pääset varaamaan paikkasi tapahtumasta</h2>";
 echo "<a href='kirjaudu'>Voit kirjautua tästä</a></b>";
 echo "<br><a href='lisaa_tili'>tai luoda tilin tästä</a></b><br><br>";
 }
+
 if ($loggeduser) {
-    if (!$ilmoittautuminen) {
+      if (!$ilmoittautuminen) {
       echo"<br><br><br><br>";
       echo "<div class='flexarea'><a href='ilmoittaudu?id=$tapahtuma[idtapahtuma]' class='button'>ILMOITTAUDU</a></div>";    
-    } else {
+      } else {
       echo "<div class='flexarea'>";
       echo"<br>";
       echo "<p><div>Olet ilmoittautunut tapahtumaan!</div></p>";
@@ -31,11 +34,12 @@ if ($loggeduser) {
 ?>
 
 
- <br><br>
+<br><br>
 <h1><?=$tapahtuma['nimi']?></h1>
 <br><br>
 <div><?=$tapahtuma['kuvaus']?></div>
-<div>Alkaa: <?=$start->format('j.n.Y G:i')?></div>
-<div>Loppuu klo <?=$end->format(' G:i')?></div>
+<br><br>
+<div><b>Alkaa: <?=$start->format('j.n.Y G:i')?></div>
+<div>Loppuu klo <?=$end->format(' G:i')?></b></div>
 
 

@@ -33,6 +33,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     align-items: center; 
+    padding: 1em;
 }
 img{
 
@@ -41,11 +42,11 @@ img{
 }
 
 h1,h2{
-
+  
   font-size: 2rem;
 }
 
-
+h
 p{
   font-size: 1rem;
   color: rgb(53, 46, 26);
