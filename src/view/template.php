@@ -11,14 +11,12 @@
        <h2><a href="etusivu">📹KinoLate</a></h2>
         <nav>
         <ul>
-        <p2> <a href="teatterit">Teatterimme</a></p2>
-        
-      
+        <p> <a href="teatterit">Teatterimme</a></p>
   
-         <p2><a href="elokuvat">Näytökset</a></p2>
+        <p><a href="elokuvat">Elokuvat ja näytökset</a></p>
    
-         <p2><a href="tapahtumat">Elokuvateemapäivät </a></p2>
-</div>
+        <p><a href="tapahtumat">Elokuvateemapäivät </a></p>
+
 </li>
 </ul>
 <?php

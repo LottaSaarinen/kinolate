@@ -8,6 +8,8 @@
 if (!$loggeduser) {
    
 echo"<h2> Luomalla tilin pääset varaamaan paikkasi elokuvasta</h2>";
+echo "<a href='kirjaudu'>Voit kirjautua tästä</a></b>";
+echo "<br><a href='lisaa_tili'>tai luoda tilin tästä</a></b><br><br>";
 }
 
 

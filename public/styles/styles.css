@@ -40,52 +40,45 @@ img{
   height:auto;
 }
 
-h1{
+h1,h2{
 
   font-size: 2rem;
 }
 
-h2{
-
-  font-size: 2rem;
-}
-
-div {
- 
-  color: wheat;
-  font-size: 1rem;
-}
-
-div a {
-  text-decoration: none;
-}
 
 p{
   font-size: 1rem;
   color: rgb(53, 46, 26);
   align-items: center;
-  text-align: center;   
+  text-align: center; 
+
 }
     
 header {
   background-color: #746a58;
   align-items: center;
   margin-bottom: 3em;
+  padding: 1rem 1.5rem;
 }
+header a {
+  text-decoration: none; 
+  padding: 1em;
+  }
  
 header h1 {
   font-size: 1rem;
   color:black;
-  text-align: right; 
-  padding-bottom:2rem;
-  margin-top: -2em; 
+  text-align:right; 
+  padding: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+ 
+  
+ 
 } 
      
-header a {
-text-decoration: none; 
- padding: 1em;
-}
- 
 header h2 {
 font-size:2rem;
 color:rgb(41, 40, 39);
@@ -93,48 +86,31 @@ text-align: left;
 font-weight: bold;
 }
 
-a {
-color: rgb(53, 46, 26);  
-}
-a:hover {
-color: #873131
-}
+
  nav ul {
   
 display: flex;
 flex-direction: row;
 justify-content:center;
-color: rgb(111, 108, 108);
-font-size: 1rem;
- }
-
-ul {
-  font-size: 2rem;
-
-
 }
-li a, .dropbtn {
+a {
+  color: rgb(53, 46, 26);  
+  }
 
-  justify-content: center;
-  color: rgb(62, 60, 60);
-  text-align: center;
-  text-decoration: none;
-}
+  a:hover {
+  color: #873131
+  }
 
-
-.dropdown-content a {
-  color:none;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-
-.dropdown:hover .dropdown-content {
-display: block;
-}
-
-
-
+  div {
+ 
+    color: wheat;
+    font-size: 1rem;
+  }
+  
+  div a {
+    text-decoration: none;
+  }
+  
   form > div {
     display: flex;
     flex-direction: column;
@@ -178,7 +154,7 @@ display: block;
   
   .info a {
     color: #7b5c09;
-    text-decoration:wavy;
+   
   }
   input[type=submit], .button 
     .flexarea {

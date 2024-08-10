@@ -5,6 +5,14 @@
 ?>
 <hr><br><hr><br><br>
 <?php
+
+
+if (!$loggeduser) {
+   
+echo"<h2> Luomalla tilin pääset varaamaan paikkasi tapahtumasta</h2>";
+echo "<a href='kirjaudu'>Voit kirjautua tästä</a></b>";
+echo "<br><a href='lisaa_tili'>tai luoda tilin tästä</a></b><br><br>";
+}
 if ($loggeduser) {
     if (!$ilmoittautuminen) {
       echo"<br><br><br><br>";
@@ -21,11 +29,7 @@ if ($loggeduser) {
   }
 
 ?>
-<?php
-if (!$loggeduser) {
-  echo "<h1> Luomalla tilin pääset ilmottautumaan mukaan tapahtumaan</h1><br>";
 
-}?>
 
  <br><br>
 <h1><?=$tapahtuma['nimi']?></h1>
